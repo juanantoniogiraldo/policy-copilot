@@ -1,10 +1,18 @@
+import path from 'path';
+
 // Zero-paid-API demo mode
 export const DEMO_MODE = true;
 
-// Data paths
-export const POLICIES_PATH = './data/policies/policies_full.md';
-export const ANSWER_CONTRACT_PATH = './data/answer-contract/answer-contract.md';
-export const DB_PATH = './data/policy-index.db';
+// Data paths - use absolute paths that work in both dev and production
+const getDataPath = (relativePath: string) => {
+  // In production on Netlify, use process.cwd()
+  // In development, also use process.cwd()
+  return path.join(process.cwd(), relativePath);
+};
+
+export const POLICIES_PATH = getDataPath('data/policies/policies_full.md');
+export const ANSWER_CONTRACT_PATH = getDataPath('data/answer-contract/answer-contract.md');
+export const DB_PATH = getDataPath('data/policy-index.db');
 
 // BM25 Retrieval Configuration
 // BM25 scores are raw TF-IDF scores (not 0-1 normalized)

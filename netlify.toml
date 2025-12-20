@@ -1,0 +1,17 @@
+# Netlify Configuration for Policy Copilot
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Ensure data files are included in deployment
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "20"
+  
+# This tells Netlify to include our database and policy files
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["data/**/*"]
+
