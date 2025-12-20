@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
     return config;
   },
   
+  // Add turbopack config to avoid build errors (Next.js 16 requirement)
+  turbopack: {
+    // Empty config tells Next.js we acknowledge Turbopack but want to keep webpack too
+  },
+  
   // Output as standalone for Netlify
   output: 'standalone',
 };
