@@ -34,13 +34,13 @@ export default function QuestionInput({ onSubmit, loading }: Props) {
           <label htmlFor="question" className="block text-sm font-bold text-[#1a1a1a] uppercase tracking-wide mb-3">
             Enter Policy Question
           </label>
-          {/* Textarea with gold focus ring */}
+          {/* Textarea with gold focus ring and dark placeholder */}
           <textarea
             id="question"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="Enter your policy question here..."
-            className="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all"
+            className="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all text-[#1a1a1a] placeholder:text-gray-600"
             rows={3}
             disabled={loading}
             maxLength={500}
@@ -61,16 +61,16 @@ export default function QuestionInput({ onSubmit, loading }: Props) {
             {loading ? 'Searching Policies...' : 'Submit Question'}
           </button>
           
-          {/* Dropdown with gold focus */}
+          {/* Dropdown with gold focus and dark text */}
           <select
             onChange={(e) => setQuestion(e.target.value)}
             value=""
             disabled={loading}
-            className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] bg-white font-medium"
+            className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] bg-white font-medium text-[#1a1a1a]"
           >
-            <option value="">Example Questions...</option>
+            <option value="" className="text-gray-600">Example Questions...</option>
             {exampleQuestions.map((q, i) => (
-              <option key={i} value={q}>{q}</option>
+              <option key={i} value={q} className="text-[#1a1a1a]">{q}</option>
             ))}
           </select>
           
