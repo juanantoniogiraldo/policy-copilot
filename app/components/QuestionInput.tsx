@@ -58,7 +58,7 @@ export default function QuestionInput({ onSubmit, loading }: Props) {
             disabled={loading || !question.trim()}
             className="px-8 py-3 bg-[#C8102E] text-white font-bold rounded-lg hover:bg-[#D4AF37] hover:text-black disabled:bg-gray-400 disabled:cursor-not-allowed transition-all shadow-md"
           >
-            {loading ? '🔍 Searching Policies...' : '🚀 Submit Question'}
+            {loading ? 'Searching Policies...' : 'Submit Question'}
           </button>
           
           {/* Dropdown with gold focus */}
@@ -68,7 +68,7 @@ export default function QuestionInput({ onSubmit, loading }: Props) {
             disabled={loading}
             className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] bg-white font-medium"
           >
-            <option value="">📋 Example Questions...</option>
+            <option value="">Example Questions...</option>
             {exampleQuestions.map((q, i) => (
               <option key={i} value={q}>{q}</option>
             ))}
@@ -82,7 +82,7 @@ export default function QuestionInput({ onSubmit, loading }: Props) {
               disabled={loading}
               className="px-4 py-3 text-[#C8102E] hover:text-[#D4AF37] font-semibold transition-colors"
             >
-              ✕ Clear
+              Clear
             </button>
           )}
         </div>

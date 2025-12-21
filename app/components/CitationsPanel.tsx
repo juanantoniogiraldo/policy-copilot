@@ -12,8 +12,8 @@ export default function CitationsPanel({ citations }: Props) {
   return (
     // White card with gold left border accent
     <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#D4AF37]">
-      <h2 className="text-xl font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-        <span className="text-[#D4AF37]">📚</span>
+      <h2 className="text-xl font-bold text-[#1a1a1a] mb-4 flex items-center gap-3">
+        <span className="text-[#D4AF37] text-2xl">│</span>
         Policy Citations
       </h2>
       <div className="space-y-4">
