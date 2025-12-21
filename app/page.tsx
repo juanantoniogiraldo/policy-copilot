@@ -46,13 +46,13 @@ export default function Home() {
       <header className="bg-[#C8102E] shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center gap-4">
-            {/* Boar's Head Logo */}
-            <div className="relative h-16 w-16">
+            {/* Boar's Head Logo - White circle with gold border */}
+            <div className="h-20 w-20 bg-white rounded-full border-[3px] border-[#D4AF37] flex items-center justify-center shadow-md p-2">
               <Image 
                 src="/boars-head-logo.png" 
                 alt="Boar's Head" 
-                width={64}
-                height={64}
+                width={56}
+                height={56}
                 className="object-contain"
                 priority
               />
