@@ -49,7 +49,7 @@ export default function Home() {
             {/* Boar's Head Logo */}
             <div className="relative h-16 w-16">
               <Image 
-                src="/boars-head-logo.svg" 
+                src="/boars-head-logo.png" 
                 alt="Boar's Head" 
                 width={64}
                 height={64}
