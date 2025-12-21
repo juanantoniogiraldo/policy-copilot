@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { QueryResponse } from '@/lib/types';
 import QuestionInput from './components/QuestionInput';
 import CoverageIndicator from './components/CoverageIndicator';
@@ -46,11 +47,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center gap-4">
             {/* Boar's Head Logo */}
-            <img 
-              src="/boars-head-logo.png" 
-              alt="Boar's Head Logo" 
-              className="h-16 w-auto"
-            />
+            <div className="relative h-16 w-16">
+              <Image 
+                src="/boars-head-logo.png" 
+                alt="Boar's Head" 
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
             <div>
               <h1 className="text-3xl font-bold text-white mb-1">
                 Policy Copilot
