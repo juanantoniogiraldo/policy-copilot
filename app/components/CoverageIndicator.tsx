@@ -5,23 +5,27 @@ interface Props {
 }
 
 export default function CoverageIndicator({ status }: Props) {
+  // Boar's Head branded coverage indicators
   const styles = {
     'Covered': {
-      bg: 'bg-green-100',
-      text: 'text-green-800',
-      border: 'border-green-300',
-      label: 'Covered'
+      bg: 'bg-[#D4AF37]', // Gold background
+      text: 'text-black',
+      border: 'border-[#D4AF37]',
+      icon: '✓',
+      label: 'Fully Covered'
     },
     'Conditional': {
-      bg: 'bg-yellow-100',
-      text: 'text-yellow-800',
-      border: 'border-yellow-300',
-      label: 'Conditional'
+      bg: 'bg-yellow-400', // Yellow/Gold for conditional
+      text: 'text-black',
+      border: 'border-yellow-500',
+      icon: '⚠',
+      label: 'Conditional Coverage'
     },
     'Not Addressed': {
-      bg: 'bg-red-100',
-      text: 'text-red-800',
-      border: 'border-red-300',
+      bg: 'bg-[#C8102E]', // Boar's Head Red
+      text: 'text-white',
+      border: 'border-[#C8102E]',
+      icon: '⚡',
       label: 'Not Addressed'
     }
   };
@@ -29,8 +33,9 @@ export default function CoverageIndicator({ status }: Props) {
   const style = styles[status];
   
   return (
-    <div className={`inline-flex items-center px-4 py-2 border-2 rounded-lg font-semibold ${style.bg} ${style.text} ${style.border}`}>
-      <span className="text-lg">{style.label}</span>
+    <div className={`inline-flex items-center gap-2 px-6 py-3 border-2 rounded-lg font-bold shadow-md ${style.bg} ${style.text} ${style.border}`}>
+      <span className="text-2xl">{style.icon}</span>
+      <span className="text-base uppercase tracking-wide">{style.label}</span>
     </div>
   );
 }
