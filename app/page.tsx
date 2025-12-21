@@ -46,7 +46,7 @@ export default function Home() {
       <header className="bg-[#C8102E] shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center gap-4">
-            {/* Boar's Head Logo - Transparent background */}
+            {/* Boar's Head Logo - CSS transparent white background */}
             <div className="h-16 w-auto flex items-center">
               <Image 
                 src="/boars-head-logo.png" 
@@ -54,6 +54,10 @@ export default function Home() {
                 width={120}
                 height={64}
                 className="object-contain"
+                style={{ 
+                  mixBlendMode: 'multiply',
+                  opacity: 1
+                }}
                 priority
               />
             </div>
