@@ -46,23 +46,16 @@ export default function Home() {
       <header className="bg-[#C8102E] shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center gap-4">
-            {/* Boar's Head Logo - Free-standing with transparent black background */}
-            <div className="relative h-20 w-20">
-              <div className="absolute inset-0 bg-white rounded-full border-[3px] border-[#D4AF37] shadow-md"></div>
-              <div className="relative h-full w-full flex items-center justify-center p-2">
-                <Image 
-                  src="/boars-head-logo.png" 
-                  alt="Boar's Head" 
-                  width={60}
-                  height={60}
-                  className="object-contain"
-                  style={{ 
-                    mixBlendMode: 'screen',
-                    filter: 'brightness(1.1) contrast(1.2)'
-                  }}
-                  priority
-                />
-              </div>
+            {/* Boar's Head Logo - Oval shape matching logo design */}
+            <div className="h-20 w-24 rounded-full overflow-hidden border-[3px] border-[#D4AF37] shadow-lg flex items-center justify-center">
+              <Image 
+                src="/boars-head-logo.png" 
+                alt="Boar's Head" 
+                width={96}
+                height={80}
+                className="object-cover"
+                priority
+              />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-white mb-1">
