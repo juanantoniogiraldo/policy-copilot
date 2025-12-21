@@ -1,0 +1,8 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle background in white -->
+  <circle cx="60" cy="60" r="58" fill="white" stroke="#D4AF37" stroke-width="4"/>
+  
+  <!-- BH text in Boar's Head Red -->
+  <text x="60" y="75" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#C8102E" text-anchor="middle">BH</text>
+</svg>
+
