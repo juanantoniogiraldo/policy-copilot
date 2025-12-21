@@ -46,10 +46,15 @@ export default function Home() {
       <header className="bg-[#C8102E] shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center gap-4">
-            {/* Boar's Head Logo Placeholder - Temporary until proper transparent logo */}
-            <div className="h-16 px-4 bg-white rounded-md flex items-center justify-center border-2 border-[#D4AF37]">
-              <span className="text-[#C8102E] font-bold text-2xl tracking-wider">BOAR'S HEAD</span>
-            </div>
+            {/* Boar's Head Logo - True transparent PNG */}
+            <Image 
+              src="/boars-head-logo.png" 
+              alt="Boar's Head" 
+              width={110}
+              height={77}
+              className="object-contain"
+              priority
+            />
             <div>
               <h1 className="text-3xl font-bold text-white mb-1">
                 Policy Copilot
