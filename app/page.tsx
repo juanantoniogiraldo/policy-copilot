@@ -41,9 +41,9 @@ export default function Home() {
   };
   
   return (
-    <main className="min-h-screen bg-[#F5F5F5]">
+    <main className="min-h-screen bg-[#F5F5F5] flex flex-col">
       {/* Boar's Head Header - Red background with white text */}
-      <header className="bg-[#C8102E] shadow-lg">
+      <header className="bg-[#C8102E] shadow-lg flex-shrink-0">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center gap-4">
             {/* Boar's Head Logo - True transparent PNG */}
@@ -67,7 +67,8 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      {/* Main content area - grows to fill space */}
+      <div className="max-w-7xl mx-auto px-4 py-8 flex-grow">
         {/* Subtitle - Black text */}
         <div className="mb-6 text-center">
           <p className="text-[#1a1a1a] text-lg">
@@ -141,7 +142,7 @@ export default function Home() {
       </div>
 
       {/* Footer - Black background with white text and gold accent */}
-      <footer className="bg-[#1a1a1a] mt-16 py-8 border-t-4 border-[#D4AF37]">
+      <footer className="bg-[#1a1a1a] mt-auto py-8 border-t-4 border-[#D4AF37] flex-shrink-0">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <p className="text-white text-sm mb-2">
